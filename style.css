@@ -64,8 +64,14 @@ main{
     margin: 0 auto;
 }
 
+.userarea__alertholder{
+    position: relative;
+}
+
 .userarea__alerta{
-    align-self: self-start;
+    /* align-self: self-start; */
+    position: absolute;
+    top: -25px;
     display: inline-flex;
     gap: 10px;
     align-items: center;
@@ -78,7 +84,6 @@ main{
     gap: 15px;
     height: auto;
     justify-content: center;
-
 }
 
 .userarea__button{

@@ -172,6 +172,10 @@ main{
     font-weight: 400;
 }
 
+.boton--copy{
+    display: none;
+}
+
 
 
 

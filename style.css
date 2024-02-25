@@ -202,7 +202,7 @@ main{
         margin: 40 40px 40px 40px;
     }
 
-    .whitebox__imgMuneco, .footer{
+    .whitebox__imgMuneco, .footer, .boton--copy{
         display: none;
     }
 

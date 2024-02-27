@@ -25,9 +25,9 @@
                         <div class="userarea__alerta">
                             <img src="img/alerta.svg" alt="alerta"><p>Solo munusculas y sin acentos</p>
                         </div> 
-                        <input onclick="getUserText();" class="userarea__button boton--azul" type="button" value="Encriptar">
+                        <input onclick="pressEncrypsButton();" class="userarea__button boton--azul" type="button" value="Encriptar">
                     </div>
-                    <input class="userarea__button" type="button" value="Desencriptar">
+                    <input onclick="pressDecryptButton();" class="userarea__button" type="button" value="Desencriptar">
                 </div>
             </div>
             
@@ -48,7 +48,7 @@
                     <p class="whitebox__p">Ingresa el texto que desees encriptar o desencriptar.</p>
                 </div>
                 <div class="whitebox__copy">
-                    <input class="userarea__button boton--copy ocultar" type="button" value="Copiar">
+                    <input onclick="pressCopyButton();" class="userarea__button boton--copy ocultar" type="button" value="Copiar">
                 </div>               
             </div>
         </section>

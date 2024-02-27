@@ -4,6 +4,41 @@ var userTitulo = document.querySelector('.whitebox__h3');
 var btnCopy = document.querySelector(".boton--copy");
 
 
+function pressEncrypsButton(){
+    modifyUI();
+    let userText = getUserText();
+    userText = encryptUserText(userText);
+    asigneElementByText(".whitebox__p", userText);
+}
+
+
+function pressDecryptButton(){
+    
+    let userText = getUserText();
+    let modifyUserText = decryptUserText(userText);
+    if (modifyUserText != userText){
+        asigneElementByText(".whitebox__p", modifyUserText);
+        modifyUI();
+    }else{
+        alert("TASK FAILED SUCCESSFULLY")
+    }
+    
+}
+
+function pressCopyButton(){
+    let paragraph = document.querySelector(".whitebox__p");
+    if (paragraph) {
+
+        // Extraer el texto del párrafo
+        const textToCopy = paragraph.innerText || paragraph.textContent;
+        navigator.clipboard.writeText(textToCopy)
+    }
+
+
+}
+
+
+
 function asigneElementByText(elemento, texto){
     let elementoHTML = document.querySelector(elemento);
     elementoHTML.innerHTML = texto;
@@ -11,11 +46,16 @@ function asigneElementByText(elemento, texto){
 
 
 function getUserText(){
+    //Obteniendo texto inicial usuario
     let userText = document.querySelector('.userarea__textarea').value.toLowerCase();
+    return userText;
+}
+
+
+function modifyUI(){
     muneco.classList.add("ocultar");
     userTitulo.classList.add("ocultar");
     btnCopy.classList.remove("ocultar");
-    asigneElementByText(".whitebox__p", encryptUserText(userText));
 }
 
 
@@ -28,10 +68,10 @@ function encryptUserText(textUser){
 }
 
 function decryptUserText(textUser){
-    return text.replace(/enter/g, "e")
-                .replace(/imes/g, "i")
-                .replace(/ai/g, "a")
-                .replace(/ober/g, "o")
-                .replace(/ufat/g, "u");
+    return textUser.replace(/enter/g, "e")
+                    .replace(/imes/g, "i")
+                    .replace(/ai/g, "a")
+                    .replace(/ober/g, "o")
+                    .replace(/ufat/g, "u");
 }
 

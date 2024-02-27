@@ -5,10 +5,16 @@ var btnCopy = document.querySelector(".boton--copy");
 
 
 function pressEncrypsButton(){
-    modifyUI();
+    
     let userText = getUserText();
-    userText = encryptUserText(userText);
-    asigneElementByText(".whitebox__p", userText);
+    if (userText){
+        modifyUI();
+        userText = encryptUserText(userText);
+        asigneElementByText(".whitebox__p", userText);
+    }else{
+        alert("No he recibido ningun texto para encriptar")
+    }
+    
 }
 
 
@@ -20,7 +26,7 @@ function pressDecryptButton(){
         asigneElementByText(".whitebox__p", modifyUserText);
         modifyUI();
     }else{
-        alert("TASK FAILED SUCCESSFULLY")
+        alert("El texto no cumple los criterios de desencriptado")
     }
     
 }

@@ -125,6 +125,7 @@ main{
 .footer{
     height: 40px;
     font-size: 12px;
+    padding: 20px;
 }
 
 /*TODO ESTO PERTENECE A LA SECCION INFOAREA*/
@@ -160,8 +161,11 @@ main{
 .whitebox__parrafo{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 70%;
     gap: 20px;
     padding: 0 30px;
+    text-overflow:ellipsis;
 }
 
 .whitebox__h3{
@@ -210,7 +214,7 @@ main{
         margin: 40 40px 40px 40px;
     }
 
-    .whitebox__imgMuneco, .footer, .boton--copy{
+    .whitebox__imgMuneco, .footer{
         display: none;
     }
 
